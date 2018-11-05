@@ -1,7 +1,8 @@
 package routers
 
 import (
-	"github.com/Echosong/beego_blog/controllers"
+	"blog/controllers"
+
 	"github.com/astaxie/beego"
 )
 
@@ -17,4 +18,5 @@ func init() {
 	beego.Router("/comment", &controllers.BlogController{}, "post:Comment")
 
 	beego.AutoRouter(&controllers.AdminController{})
+	beego.AutoRouter(&controllers.BookController{})
 }
