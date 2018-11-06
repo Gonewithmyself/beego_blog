@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>后台登录</title>
+     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <style>
 
         .main {
@@ -19,7 +20,18 @@
 
 </head>
 <body>
+    <embed   width="800" height="1500" quality="high"  src="/static/books/{{.Name}}" align=center />
 
-    <embed src="/static/{{.Name}}.pdf"/>
-                        </body>
+</body>
+<script>
+    $(function () {
+    // init...
+    setSize()
+});
+</script>
+<script>
+    function setSize() {
+    $('embed').height(window.width * 0.7);
+};
+</script>
 </html>
