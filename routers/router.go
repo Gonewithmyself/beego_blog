@@ -1,7 +1,7 @@
 package routers
 
 import (
-	"blog/controllers"
+	"beego_blog/controllers"
 
 	"github.com/astaxie/beego"
 )
@@ -17,6 +17,8 @@ func init() {
 	beego.Router("/resource", &controllers.BlogController{}, "*:Resource")
 	beego.Router("/comment", &controllers.BlogController{}, "post:Comment")
 
+	beego.Router("/login", &controllers.UserController{}, "*:Login")
 	beego.AutoRouter(&controllers.AdminController{})
 	beego.AutoRouter(&controllers.BookController{})
+	beego.AutoRouter(&controllers.UserController{})
 }

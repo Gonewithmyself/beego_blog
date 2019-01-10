@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"blog/models"
-	"blog/util"
+	"beego_blog/models"
+	"beego_blog/util"
 	"fmt"
 	"strconv"
 	"strings"

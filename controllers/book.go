@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"blog/util"
 	"path/filepath"
 	"strconv"
 	"strings"
@@ -50,10 +49,11 @@ func (c *BookController) Book() {
 }
 
 func getPdfs() []string {
-	dir, err := util.ListDir(`G:\02 go\src\blog\static\books`, "pdf")
-	if nil != err {
-		return nil
-	}
+	// dir, err := util.ListDir(`G:\02 go\src\blog\static\books`, "pdf")
+	// if nil != err {
+	// 	return nil
+	// }
+	dir := []string{}
 
 	var temp []string = make([]string, len(dir)-8)
 

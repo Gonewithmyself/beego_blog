@@ -1,2 +1,4 @@
 *.exe
 *.exe*
+.DS_Store
+beego_blog

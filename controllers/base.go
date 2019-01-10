@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"blog/models"
+	"beego_blog/models"
 	"strings"
 
 	"github.com/astaxie/beego"

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"blog/models"
-	_ "blog/routers"
+	"beego_blog/models"
+	_ "beego_blog/routers"
 
 	"github.com/astaxie/beego"
 	_ "github.com/go-sql-driver/mysql"

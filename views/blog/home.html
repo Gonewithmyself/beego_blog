@@ -28,7 +28,11 @@
                 </div>
                 <!--左边文章列表-->
                 <div class="blog-main-left">
-
+                    {{if .login}}
+                    <button class="layui-btn">你好， {{.username}}</button>
+                    {{else}}
+                    <button class="layui-btn" id="login">login</button>
+                    {{end}}
                     {{range .list}}
                     <div class="article shadow">
                         <div class="article-left">
@@ -108,4 +112,18 @@
     <!-- 底部 -->
     {{template "blog/foot.html" .}}
 </body>
+    <script>
+    $(function () {
+    // init...
+    regEvent()
+});
+</script>
+<script>
+    function regEvent(){
+
+        $(".layui-btn").click(function(e){
+           window.location.href = "/user/login"
+        })
+    }
+</script>
 </html>
